@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证码发送按钮倒数</title>
+	</head>
+	<body>
+		<input type="button" id="send" class="send" value="发送验证码"/>
+		
+		<!--这是我们进行优化的代码，实现当我们点击时才进行倒数-->
+		<!--
+			该代码的问题是，当我们点击一次后，会始终执行，不会停止
+			解决方法是：当times<=0时，清除定时器即可
+				
+				执行顺序：先执行完我们当前的函数的所有代码后，才会去执行我们定时器里的函数
+		-->
+		<script type="text/javascript">
+			window.onload=function(){
+				var send=document.getElementById("send");
+				var times=60;
+				var timer;
+				
+				send.onclick=function(){
+					if(timer){
+						clearInterval(timer);
+						timer=null;
+					}
+					
+					timer=setInterval(daoshu,1000);
+//					clearInterval(timer);
+var t="aaa";
+console.log(t);
+				}
+				
+				function daoshu(){
+						times--;
+						console.log(times);
+						send.disabled=true;
+						send.value=times+"秒后可以重新发送";
+						if(times<=0){
+							times=60;
+							clearInterval(timer);
+							send.disabled=false;
+							send.value="点击发送验证码";
+						}
+					}
+			}
+		</script>
+		<!--这是我们原先的代码
+			<script type="text/javascript">
+			window.onload=Send;
+			/*
+			 当我们将Send错写成了Send（）时，会出现Cannot set property 'disabled' of null这个错误，
+			 表示我们这个页面并没有被加载完毕
+			 * */
+			function Send(){
+				var send=document.getElementById('send');
+				var times=60;//倒数时间
+				var timer=null;
+				
+				//设置定时器实现倒数功能
+				timer=setInterval(function(){
+					times--;
+					send.style.disabled='true';
+					send.value=times+"秒后重新发送？";
+					if(times<=0){
+						clearInterval(timer);
+						times=60;
+						/*
+						 send.style.disabled=false;
+						 如果这样写的话，就只是将样式设置为false，并不能实现按钮禁止点击的效果
+						 * */
+						send.value="点击发送验证码";
+					}
+				},1000)
+			}
+			
+			/**
+			 *编程思路：
+			 * 1、在定时器执行期间，按钮为禁用状态，实现方法是在按钮上定义 disabled 属性为true
+               2、清除定时器后，按钮恢复为可用状态，实现方法将 disabled 属性设为 false
+               3、清除定时器后，计时变量再恢复为原来的值，以便下次点击不会有错误
+			 */
+			
+		</script>
+			
+		-->
+	</body>
+</html>

@@ -1,0 +1,67 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	font-size: 12px;
+}
+#notice ul li a:link,#notice ul li a:visited{/*链接颜色*/
+	color: black;
+}
+#notice ul li a:hover{
+	color: orange;
+}
+
+
+/*内容容器*/
+#notice{
+	margin: 10px auto;
+	width: 298px; /*加上边框宽度就变为300px*/
+	height: 98px;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+
+/*标题栏*/
+#notice-tit{
+	height: 27px;
+	position: relative; /*为标题提供定位*/
+	background: #F7F7F7;
+}
+#notice-tit ul{
+	position: absolute;
+	width: 301px;/*298px+2px+1px(要向左挪一个像素，让边框重叠)*/
+	left: -1px;
+}
+#notice-tit ul li{
+	float: left;
+	width: 58px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	overflow: hidden;
+	/*background: #FFF;*/
+	background: #F7F7F7;
+	padding: 0px 1px;/*不高亮显示时，添加填充内容padding，高亮显示时将padding用border来代替*/
+	border-bottom:1px solid #eee ;/*li的高度：26px+1px=27px*/
+}
+/*被选中的li所需要变换成的样式*/
+#notice-tit ul li.select{
+	background: #FFF;
+	border-bottom-color:#FFF;
+    border-left:1px solid #eee ;
+    border-right: 1px solid #eee;	
+    padding:0px 0px;/*不高亮显示时，添加填充内容padding，高亮显示时将padding用border来代替*/
+    font-weight: bolder;
+}
+
+/*内容栏*/
+#notice-con .mod{
+	margin: 10px 10px 10px 19px;
+}
+#notice-con .mod ul li{
+	float: left;
+	width: 134px;
+	height: 25px;
+	overflow: hidden;
+}

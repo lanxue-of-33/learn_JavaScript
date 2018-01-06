@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自己动手写轮播图</title>
+		<link rel="stylesheet" href="css/my_lunbo.css" />
+		<script type="text/javascript" src="js/my_lunbo.js"></script>
+	</head>
+	<body>
+		<!--实现思路
+			1；列出内容包含块，里面有图片轮播区，图片数字对应区，即前后切换标识
+			2：将图片的display设置为none即将图片隐藏，显示时设置为block；数字的也是类名的添加及删除
+			3：再写相应的js代码
+			4：我们实现时实现一个测试一个，功能慢慢加
+		-->
+		
+		
+		<!--内容包含区-->
+		<div id="wrap" class="wrap">
+			<!--图片轮播区-->
+			<ul id="pic_wrap">
+				<li><img src="img/1.jpg" class="selected"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+			</ul>
+			<!--图片数字记录区-->
+			<ol id="num_wrap">
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			
+			<!--
+                 &lt:HTML字符转义，代表"<"
+                 &gt:HTML字符转义，代表">"
+			-->
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>
+		</div>
+	</body>
+</html>
