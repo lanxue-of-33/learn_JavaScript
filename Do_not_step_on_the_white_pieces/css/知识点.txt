@@ -1,0 +1,24 @@
+1.border-collapse 属性设置表格的边框是否被合并为一个单一的边框，还是象在标准的 HTML 中那样分开显示。
+
+值	描述
+separate	默认值。边框会被分开。不会忽略 border-spacing 和 empty-cells 属性。
+collapse	如果可能，边框会合并为一个单一的边框。会忽略 border-spacing 和 empty-cells 属性。
+inherit	规定应该从父元素继承 border-collapse 属性的值。
+
+2.根据前面的 HTML 部分我们可以知道，每个 <div class="cell"> 就代表一个白块，<div class="cell black"> 就代表一个黑块，
+每点击一个黑块消失其实是删除了一个 <div class="row"> 然后从上面添加一个新的 <div class="row"> 
+所以我们首先要通过 js 来控制 <div class="row"> 的创造和生成（记得删除在编写静态页面时候指定生成的4个 div.row）。具体方法如下：
+
+3.Math。floor() 方法执行的是向下取整计算，它返回的是小于或等于函数参数，并且与之最接近的整数。
+Math.random() 是得到一个0-1之间随机数.
+Math.floor(i) 是得到一个数的整数部分
+Math.random()*4的值是[0-4)之间的随机数
+tmp就是指随机出来的一个整数0,1,2,3其中的一个
+
+4.childNodes 子节点（子分支）
+length  长度，程序里通常用length和Size来表示长度、大小、个数的意思
+childNodes.length，是子节点的个数
+
+5.insertBefore() 方法在您指定的已有子节点之前插入新的子节点。
+
+6.getComputedStyle是一个可以获取当前元素所有最终使用的CSS属性值。

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网页版别踩白块儿</title>
+		<link rel="stylesheet" href="css/a.css" />
+		<script type="text/javascript" src="js/a.js"></script>
+	</head>
+	<body>
+		<!--
+			将主界面分解成一个4x4的大矩形格子，每一个方块代表其中一个小的矩形格，其中每一行的四个白块中有一个黑块，
+			每一行中黑块位于那一列是随机生成的，但是我们这里现在是静态页面就自己确定了，然后通过 css 控制样式。
+		-->
+		<div id="main">
+			<div id="con"> <!--容器 -->
+				<div class="row"><!--第一行-->
+					<div class="cell"></div><!--白块-->
+					<div class="cell black"></div><!--黑块-->
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="row"><!--第二行-->
+					<div class="cell"></div>
+					<div class="cell black"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="row"><!--第三行-->
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell black"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="row"><!--第四行-->
+					<div class="cell black"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
