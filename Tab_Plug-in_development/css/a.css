@@ -1,0 +1,73 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	padding: 100px;
+	background: #232323;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+img{
+	width: 290px;
+	height: 200px;
+}
+
+.tab-view{
+	float: left;
+	margin-right: 50px;
+}
+.tab-view p{
+	color: #999;
+	margin-bottom: 20px;
+}
+/*第一个选项卡*/
+.tab{
+	width: 300px;
+}
+.tab .tab-nav{
+	height: 30px;
+}
+.tab .tab-nav li{
+	float: left;
+	margin-right: 5px;
+	background: #767676;
+	border-radius: 3px 3px 0px 0px;
+}
+.tab .tab-nav li a{
+	display: block;
+	height: 30px;
+	padding: 0px 20px;
+	color: #fff;
+	line-height: 30px;
+}
+
+.tab .content-wrap{
+	background: #FFFFFF;
+	padding: 5px;
+	height: 200px;
+	overflow: hidden;
+}
+.tab .content-wrap .content-item{
+	position: absolute;/*不加这个时，图片淡入淡出切换时会出现白底的样子，不太好看*/
+	height: 200px;
+	display: none;
+}
+
+
+/*显示时的样式*/
+.tab .tab-nav li.actived{
+	background: #fff;
+}
+.tab .tab-nav li.actived a{
+	color: #777;
+}
+.tab .content-wrap .current{
+	display: block;
+}
