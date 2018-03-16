@@ -1,0 +1,169 @@
+/*本css是将hover改成了.lihover*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-family: "微软雅黑" "arial black";
+	font-size: 10pt;
+}
+body{
+	padding: 0px;
+	font-size: 10pt;
+	/*为了兼容ie6，需要添加一个补丁文件
+	 该补丁文件可以百度直接下载
+	 * */
+	behavior: url(css/csshover.htc);
+}
+
+
+.topmenu{
+	display: block;
+	width: 220px;
+	border: 2px solid #e4393c;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+}
+.toptitle{
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	font-size: 11pt;
+	font-weight: bold;
+	color: white;
+	background: #e4393c;
+	padding-left: 20px;
+}
+
+/*一级菜单*/
+.topmenu li{
+	height: 30px;
+	line-height: 30px;
+	font-size: 11pt;
+	text-align: left;
+	padding-left: 8px;
+	z-index: 3;
+	background-image: url(http://img.mukewang.com/5411027300014f0200220030.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.topmenu li a{
+	color: #313131;
+}
+.topmenu li a:hover{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #E4393C;
+}
+.topmenu .lihover{  /*鼠标移动到上面时应用的样式*/
+	border: 1px solid #DDD;
+	border-right: 0px;
+	/*边框阴影，即边框外发光*/
+	box-shadow: 0 0 8px #DDD;
+	-webkit-box-shadow: 0 0 8px #DDD ;
+	background-image: none;
+	border-left: 3px solid #E4393C;
+}
+
+
+/*二级菜单*/
+.submenu{
+	display: none;
+	width: 715px;
+	left: 220px;
+	position: absolute;
+	top: 40px;
+	border: 1px solid #DDDDDD;
+	z-index: 4;
+	background: white;
+	box-shadow: 0 0 8px #DDD;
+	-webkit-box-shadow: 0 0 8px #DDD ;
+}
+.leftdiv{
+	/*background: gray;*/
+	float: left;
+	width: 490px;
+	margin: 5px;
+}
+.rightdiv{
+	/*background: blue;*/
+	float: left;
+	width: 200px;
+	margin: 5px;
+}
+.topmenu .lihover .submenu{  /*悬浮层*/
+	display: block;
+}
+.topmenu .lihover span{   /*遮住白色边框线*/
+	background: white;
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	float: right;
+	position: relative;
+	z-index: 20;
+}
+
+/*二级菜单里的列表*/
+.leftdiv dl{
+	display: block;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 6px;
+	overflow: hidden;
+}
+.leftdiv dl dt{
+	display: block;
+	float: left;
+	width: 60px;
+	text-align: right;
+	height: 22px;
+	line-height: 22px;
+	padding-right: 6px;
+}
+.leftdiv dl dt a{
+	color: #E4393C;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 10pt;
+}
+.leftdiv dl dd{
+	display: block;
+	overflow: hidden;
+}
+.leftdiv dl dd a{
+	margin: 4px 0px;
+	display: block;
+	float: left;
+	border-left: 1px solid #CCC;
+	color: #737373;
+	font-size:9pt;
+	padding:0px 8px;
+	height: 14px;
+	line-height: 14px;
+}
+/*
+ 这里将dt的高设置成22px，而将dd设置成14px的原因是当dd用多行时，左边的边框将会连在一起，
+ 所以我们一开始需要将dt的行高设置的比dd要高一些而不是设置的一样高
+ * */
+
+.rightdiv dl dd{
+	margin: 3px 0px;
+}
+.rightdiv dl dt{
+	color: #E4393C;
+	font-size: 10pt;
+}
+.rightdiv dl dd a{
+	font-size: 9pt;
+	color: #737373;
+	line-height: 22px;
+}
+.rightdiv dl dd a:hover{
+	color: #737373;
+	/*不加粗*/
+	font-weight: normal;
+}
