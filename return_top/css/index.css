@@ -1,0 +1,23 @@
+.box{
+	width: 1190px;
+	margin: 0 auto;
+}
+#btn{
+	display: none;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	left: 50%;
+	bottom: 30px;
+	background-image: url(../img/top_bg.png);
+	background-repeat: no-repeat;
+	margin-left: 600px;
+}
+#btn:hover{
+	/*background-image: url(../img/top_bg.png);
+	background-repeat: no-repeat;*/
+	/*
+	 【背景图片链接】【平铺方式（无平铺）】【距左边边距（数值或left或百分比）】【距顶端边距（数值或top或百分比）】
+	 * */
+	background: url(../img/top_bg.png) no-repeat left -40px;
+}
